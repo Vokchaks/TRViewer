@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tempo Reale Check</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-lg-4">
+                <h2><p class="text-left" id="date"></p></h2>
+            </div><!--
+         --><div class="col-md-4 col-lg-4">
+                <p class="text-center h1"><b>MYCOMPANY</b></p>
+            </div><!--			
+         --><div class="col-md-4 col-lg-4">
+                <h2><p class="text-right" id="clock"></p></h2>
+            </div>
+        </div>
+        <div class="row">	
+            <div class="col-md-5 col-lg-5"></div>
+            <div class="col-md-1 col-lg-1"><p class="text-center"><input type="button" value="Старт" id="startButton" onClick="startLog();" /></p></div>
+            <div class="col-md-1 col-lg-1"><p class="text-center"><input type="button" value="Стоп" id="stopButton" onClick="stopLog();" disabled="disabled" /></p></div>
+            <div class="col-md-5 col-lg-5"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-lg-6 vcenter">
+                <p id="photo" class="text-center h1">НЕТ ФОТО</p>
+            </div><!--
+         --><div class="col-md-6 col-lg-6 vcenter">
+                <p id="fio" class="text-center h1">ДАННЫХ НЕТ</p>
+            </div>
+        </div>
+        <div class="footer-bottom row">
+            <div class="col-md-12 col-lg-12">
+                <p class="text-center"><b>ЛОГ ПРОХОДА</b></p>
+                <table class="table table-striped">
+                    <thead><tr><th>Time</th><th>Message</th><th>Device</th><th>User Name</th><th>Position</th></tr></thead>
+                    <tbody id="message"></tbody>
+                </table>
+            </div>	
+        </div>
+        <p id="debug"></p>
+    <!--script type="text/javascript">
+        window.onload=function(){
+            //document.getElementById('startButton').disabled = false;
+            //document.getElementById('stopButton').disabled = true;
+            startLog();
+            startTime();
+        }
+    </script-->
+    </div> <!-- container --> 
+    <script>
+        require('./index.js');
+    </script>
+</body>
+</html>

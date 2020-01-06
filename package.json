@@ -1,0 +1,20 @@
+{
+  "name": "TRViewer",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {
+    "electron": "^1.7.6",
+    "jquery": "^3.2.1",
+    "request": "^2.81.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "package-win": "electron-packager . TRViewer --platform=win32 --arch=x64 --overwrite"
+  },
+  "dependencies": {
+    "electron": "^1.7.6",
+    "fs": "0.0.1-security",
+    "jquery": "^3.2.1",
+    "request": "^2.81.0"
+  }
+}
